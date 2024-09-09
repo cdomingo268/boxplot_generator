@@ -1,11 +1,9 @@
 Instructions
  - Save in desired location:
    1. `boxplot_generator`
-   2. `.csv`
- - Open new terminal at folder location.
- - Command
-     `python bad_boxplot_generator.py`
- - requires two inputs:
+   2. `.csv` file as input.
+ - Open new terminal at folder location and enter command: `python bad_boxplot_generator.py`
+ - Prompts two inputs:
    1. `.csv` filepath and name.
    2. outlier (maximum, inclusive).
 
