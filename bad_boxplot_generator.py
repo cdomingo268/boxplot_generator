@@ -48,6 +48,7 @@ def boxplot_by_group(dframe, outliers=True): # input dframe(DataFrame), outlier(
     plt.xlabel('Days from Start of Treatment')
     plt.ylabel('Area (mm^2)')
     plt.legend(['Control']).get_frame().set_facecolor('C0')
+    plt.gcf().set_dpi(300)
     plt.show();
     
     return None
