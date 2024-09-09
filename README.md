@@ -11,5 +11,5 @@ Instructions
    2. boxplot without outliers; filename fromated as `ddMmmYYYY figure without outliers > x.png`, where 'ddmmyyyy' represents final day of reported treamtment and 'x' represents maximum data point range.
 
 Notes:
-- Jupyter Notebook (bad_box_lot_generator_tutorial.ipynb) file contains methods for updating and improving functionality.
-- Example comma-separated value file describes key sensitive row/column data for input.
+- Jupyter Notebook (bad_box_lot_generator_tutorial.ipynb) file contains example usage and methods for updating improving functionality.
+- Example comma-separated value file illustrates key-sensitive column names: `date`, 	`type`, 	`cage_num`, 	`width_mm`, `length_mm`,	`area_mm^2`, and `note`.
