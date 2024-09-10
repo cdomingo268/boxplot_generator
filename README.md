@@ -5,7 +5,7 @@ Instructions
  - Open new terminal at desired folder location and enter command: `python boxplot_generator.py`
  - Inputs:
    1. `.csv` filepath/name.
-   2. outlier maximum (values > input are excluded from data).
+   2. outlier - maximum (values > input are excluded from data).
  - Outputs two .png files:
    1. boxplot with outliers; saved-filename formated as `ddmmyyyy figure with outliers.png`, where 'ddmmyyyy' represents final day of reported treatment.
    2. boxplot without outliers; filename fromated as `ddMmmYYYY figure without outliers > x.png`, where 'ddmmyyyy' represents final day of reported treamtment and 'x' represents maximum data point range.
