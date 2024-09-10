@@ -1,7 +1,7 @@
 ## Instructions
  - Save in desired location:
    1. `boxplot_generator` folder OR `boxplot_generator.py` python file only.
-   2. User `.csv` file as input.
+   2. user `.csv` file as input.
  - Open new terminal at desired folder location and enter command: `python boxplot_generator.py`
  - Inputs:
    1. `.csv` filepath/name.
