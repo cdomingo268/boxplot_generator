@@ -7,12 +7,19 @@ import seaborn as sns
 
 # plot user defined function
 def get_plot(function):
-    if function == 'boxplot':
+    if function == 'b':
         boxplot_generator(measurements_df, outliers=False);
         boxplot_generator(measurements_df);
-    elif function == 'lineplot':
-        lineplot_generator(measurements_df, outliers=False);
-        lineplot_generator(measurements_df);
+    elif function == 'l':
+        ol = input('Include outliers [y/n]: ')
+        if ol == 'n':
+            lineplot_generator(measurements_df, outliers=False);
+        elif ol == 'y':
+            lineplot_generator(measurements_df);
+        else:
+            print('ERROR:incorrect input \'{}\' - please re-run script.'.format(ol))
+    else:
+        print('ERROR:incorrect input \'{}\' - please re-run script.'.format(function))
 
     return None
 
@@ -73,7 +80,6 @@ def lineplot_generator(dframe, outliers=True): # input dframe(DataFrame), outlie
 unfiltered_measurements_df = pd.read_csv(input('Enter filepath for .csv file: '))
 measurements_df = unfiltered_measurements_df[pd.isna(unfiltered_measurements_df['date']) == False] # remove last NaN row
 last_day = add_days_column(measurements_df);
-# get user defined function call
-function = input('Enter key-sensitive plot generation (\'boxplot\' or \'lineplot\'): ')
-#Test plot script
-get_plot(function);
+
+# get user defined function call and test plot script
+get_plot(input('Enter key-sensitive plot generation (boxplot or lineplot) [b/l]: '));
