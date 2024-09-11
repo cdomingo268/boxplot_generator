@@ -1,11 +1,20 @@
 # Importing pandas and matplotlib
-import sys
-sys.path
 import pandas as pd
 from datetime import datetime
 from datetime import timedelta
 import matplotlib.pyplot as plt
 import seaborn as sns
+
+# plot user defined function
+def get_plot(function):
+    if function == 'boxplot':
+        boxplot_generator(measurements_df, outliers=False);
+        boxplot_generator(measurements_df);
+    elif function == 'lineplot':
+        lineplot_generator(measurements_df, outliers=False);
+        lineplot_generator(measurements_df);
+
+    return None
 
 # add dataframe column 'day' to represent the number of days since start of treatment
 # return final day of treatment for filesaving
@@ -60,11 +69,11 @@ def lineplot_generator(dframe, outliers=True): # input dframe(DataFrame), outlie
     
     return None
     
-# Read in the data collection CSV as a DataFrame
+# Read in data collection CSV as a DataFrame and mutate
 unfiltered_measurements_df = pd.read_csv(input('Enter filepath for .csv file: '))
 measurements_df = unfiltered_measurements_df[pd.isna(unfiltered_measurements_df['date']) == False] # remove last NaN row
-
-#Test func
 last_day = add_days_column(measurements_df);
-boxplot_generator(measurements_df, outliers=False);
-boxplot_generator(measurements_df);
+# get user defined function call
+function = input('Enter key-sensitive plot generation (\'boxplot\' or \'lineplot\'): ')
+#Test plot script
+get_plot(function);
